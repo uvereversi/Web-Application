@@ -29,14 +29,14 @@ export default new Vuex.Store({
   actions: {
     async login({ commit }, { email, password }) {
       const responseLogin = await axios.post(
-        "https://git.heroku.com/sleepy-lake-33242.git/api/login",
+        "https://sleepy-lake-33242.herokuapp.com/api/login",
         {
           email: email,
           password: password,
         }
       );
       const responseUser = await axios.get(
-        "https://git.heroku.com/sleepy-lake-33242.git/api/user",
+        "https://sleepy-lake-33242.herokuapp.com/api/user",
         {
           params: {
             email: email,
